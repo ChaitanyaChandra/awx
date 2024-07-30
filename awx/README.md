@@ -21,8 +21,12 @@ kustomize version
 
 ### AWX INSTALL
 
+* install
 ```sh
 kustomize build . | kubectl apply -f -
 ```
 
-
+* retrieve secret
+```
+kubectl get secret awx-demo-admin-password -o jsonpath=”{.data.password}” -n awx | base64 — decode | more
+```
