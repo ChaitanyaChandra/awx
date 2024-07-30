@@ -26,6 +26,11 @@ kustomize version
 kustomize build . | kubectl apply -f -
 ```
 
+* port forward
+```
+kubectl -n awx port-forward --address 0.0.0.0 service/awx-app-service 80
+```
+
 * retrieve secret
 ```
 awx_secret=$(kubectl get secret awx-app-admin-password -o jsonpath=”{.data.password}” -n awx)
