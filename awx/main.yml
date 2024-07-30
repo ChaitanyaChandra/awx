@@ -5,3 +5,7 @@ metadata:
   name: awx-app
 spec:
   service_type: nodeport
+  extra_settings:
+  - setting: CSRF_TRUSTED_ORIGINS
+    value:
+      - https://awx.chaitu.net
