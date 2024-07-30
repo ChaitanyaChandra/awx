@@ -17,7 +17,7 @@ kustomize version
 ### AWX INSTALL
 
 ```sh
-kustomize build . | kubectl apply -f -
+kustomize build . | microk8s kubectl apply -f -
 ```
 
 
